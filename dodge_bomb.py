@@ -73,6 +73,13 @@ def main():
         if check_bound(kk_rct) != (True, True):
             kk_rct.move_ip(-sum_mv[0], -sum_mv[1])
 
+        for event in pg.event.get():
+            if event.key == pg.K_UP:
+                pass
+            elif event.key == pg.K_DOWN:
+                pass
+
+
 
         screen.blit(bg_img, [0, 0])
         screen.blit(kk_img, kk_rct)
