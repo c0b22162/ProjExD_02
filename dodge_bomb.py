@@ -11,6 +11,7 @@ delta = {
     pg.K_RIGHT: (+5, 0),
 }
 
+
 def check_bound(rect: pg.Rect) -> tuple[bool, bool]:
     """
     こうかとんRect，爆弾Rectが画面外 or 画面内かを判定する関数
@@ -72,14 +73,6 @@ def main():
         kk_rct.move_ip(sum_mv)
         if check_bound(kk_rct) != (True, True):
             kk_rct.move_ip(-sum_mv[0], -sum_mv[1])
-
-        for event in pg.event.get():
-            if event.key == pg.K_UP:
-                pass
-            elif event.key == pg.K_DOWN:
-                pass
-
-
 
         screen.blit(bg_img, [0, 0])
         screen.blit(kk_img, kk_rct)
